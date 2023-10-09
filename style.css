@@ -1,0 +1,120 @@
+* {
+  font-family: sans-serif;
+  color: white;
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  overflow-x: hidden;
+}
+#Home {
+  background-image: url(./background.png);
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 0px 500px;
+}
+#Home h1 {
+  color: white;
+  position: absolute;
+  font-size: 50px;
+  z-index: 2;
+  margin-top: 10px;
+}
+#Home img {
+  position: absolute;
+  bottom: 0px;
+}
+#Mountain1 {
+  position: absolute;
+  margin-bottom: 106px;
+  margin-left: 60px;
+  width: 100%;
+  pointer-events: none;
+}
+#Mountain2 {
+  width: 100%;
+  z-index: 3;
+  pointer-events: none;
+}
+#leftCloud,
+#mainCloud,
+#rightCloud {
+  top: 120px;
+  width: 200px;
+}
+#leftCloud {
+  left: 110px;
+}
+#rightCloud {
+  right: 110px;
+}
+@keyframes loadAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+header nav {
+  position: absolute;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  z-index: 4;
+  padding: 30px 140px;
+  font-size: 22px;
+  animation: loadAnimation 2s;
+}
+header nav span {
+  width: 50%;
+  padding-right: 60px;
+  display: flex;
+  justify-content: space-around;
+}
+header nav span a {
+  text-decoration: none;
+  position: relative;
+}
+header nav span a::before {
+  content: "";
+  background-color: white;
+  width: 0%;
+  height: 2.5px;
+  display: unset;
+  position: absolute;
+  border-radius: 20px;
+  bottom: -5px;
+  transition: 0.3s;
+}
+header nav span a:hover::before {
+  width: 100%;
+}
+#About {
+  background-color: #c20772;
+  padding: 0px 100px;
+  min-height: 100vh;
+  font-size: 20px;
+}
+#About h1 {
+  padding-top: 50px;
+  font-size: 40px;
+}
+#About p{
+    padding: 30px 0px;
+}
+.active{
+    color: black;
+}
+.active::before{
+    background-color: black;
+    width: 100%;
+}
