@@ -48,10 +48,10 @@ body {
   width: 200px;
 }
 #leftCloud {
-  left: 110px;
+  left: 20px;
 }
 #rightCloud {
-  right: 110px;
+  right: 20px;
 }
 @keyframes loadAnimation {
   0% {
